@@ -91,7 +91,7 @@ typedef enum {
     UCS_CONFIG_PRINT_DOC             = UCS_BIT(2),
     UCS_CONFIG_PRINT_HIDDEN          = UCS_BIT(3),
     UCS_CONFIG_PRINT_COMMENT_DEFAULT = UCS_BIT(4),
-    UCS_CONFIG_PRINT_TLS = UCS_BIT(5)  //HW5
+    UCS_CONFIG_PRINT_TLS             = UCS_BIT(5)  //TODO HW5
 } ucs_config_print_flags_t;
 
 

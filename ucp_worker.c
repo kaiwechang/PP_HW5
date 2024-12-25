@@ -1778,7 +1778,7 @@ ucp_worker_print_used_tls(ucp_worker_h worker, ucp_worker_cfg_index_t cfg_index)
     int num_valid_lanes             = 0;
     ucp_lane_index_t lane;
 
-    // HW5
+    //TODO HW5
     ucp_config_t *config;
     ucs_status_t status;
 
@@ -1857,16 +1857,17 @@ ucp_worker_print_used_tls(ucp_worker_h worker, ucp_worker_cfg_index_t cfg_index)
     ucs_string_buffer_rtrim(&strb, "; ");
 
     ucs_info("%s", ucs_string_buffer_cstr(&strb));
-    //TODO HW5
 
+    //TODO HW5
     status = ucp_config_read(NULL, NULL, &config);
     if (status != UCS_OK){
-        printf("<Failed to read UCP configuraton>\n");
+        printf("<It can not get UCP config status>\n");
         return;
     }   
-    // the third para is used to pass the second line (0x56544467c8f0 self cfg#0 tag(ud_verbs/ibp3s0:1))
+    // the third para is used to pass the data of (0x56544467c8f0 self cfg#0 tag(ud_verbs/ibp3s0:1))
     ucp_config_print(config, stdout, ucs_string_buffer_cstr(&strb), UCS_CONFIG_PRINT_TLS);
     ucp_config_release(config);
+
 }
 
 static ucs_status_t ucp_worker_init_mpools(ucp_worker_h worker)

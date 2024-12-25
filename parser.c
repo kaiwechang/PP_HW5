@@ -1878,7 +1878,6 @@ void ucs_config_parser_print_opts(FILE *stream, const char *title, const void *o
     }
 
     // TODO: PP-HW-UCX
-    // TODO HW5
     if (flags & UCS_CONFIG_PRINT_TLS ) {
         char **envp, *envstr;
         char *mainString;
@@ -1899,7 +1898,7 @@ void ucs_config_parser_print_opts(FILE *stream, const char *title, const void *o
             ucs_free(envstr);
         }
         
-        // 2. print second line
+        //TODO HW5 printf transport protocols selected by UCX
         printf("%s\n", title);
     }
 
